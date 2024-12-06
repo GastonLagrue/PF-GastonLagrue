@@ -1,0 +1,184 @@
+
+:root
+ {
+    --chocolate: chocolate;
+    --beige: beige;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: var(--beige);
+    color: var(--chocolate);
+}
+
+
+img
+
+{
+ 
+ border-style: solid;
+
+}
+
+
+
+.header-caja
+ {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--chocolate);
+    color: var(--beige);
+}
+
+.animaciontitulo
+
+
+{
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn
+ {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+
+
+
+
+.virtudes-defectos
+
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.virtudes, .defectos
+
+
+{
+    background-color: var(--chocolate);
+    color: var(--beige);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+ul
+
+{
+    text-align: center;
+    list-style: none;
+}
+
+
+
+.actividades 
+
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.actividad
+
+{
+    background-color: var(--beige);
+    border: 2px solid var(--chocolate);
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    animation: scaleUp 1.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes scaleUp
+
+{
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+
+
+.tituloflotando
+{
+    text-align: center;
+    margin: 20px;
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float
+ {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+
+.extra 
+
+{
+    padding: 20px;
+}
+
+
+@keyframes walk {
+    from { transform: translateX(-100px); }
+    to { transform: translateX(100vw); }
+}
+
+footer
+
+{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--chocolate);
+    color: var(--beige);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .virtudes-defectos {
+        grid-template-columns: 1fr;}
+
+
+
+    .actividades 
+    
+    
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actividad
+     {
+        width: 80%;
+        margin-bottom: 10px;
+    
+    
+    }
+}

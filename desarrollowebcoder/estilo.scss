@@ -1,0 +1,35 @@
+
+$chocolate: chocolate;
+$beige: beige;
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $beige;
+    color: $chocolate;
+}
+
+
+.header-caja {
+    text-align: center;
+    padding: 20px;
+    background-color: $chocolate;
+    color: $beige;
+
+    h1 {
+        animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+
